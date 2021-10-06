@@ -7,7 +7,8 @@ class MetOffice {
 		const baseURL = "http://datapoint.metoffice.gov.uk/public/data/";
 		const withResource = baseURL + resource;
 		let optionString = "?";
-		for (const option in options) {
+		for (const key in options) {
+			const option = options[key];
 			optionString += option + "&";
 		}
 		optionString += `key=${APIKey}`;
