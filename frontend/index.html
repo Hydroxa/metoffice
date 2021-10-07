@@ -9,23 +9,35 @@
   <body>
     <h1>MET Office Weather Forecast</h1>
     <form action="javascript:void(0)" onsubmit="getWeatherData();" autocomplete="on">
-        Location:<br>
-        <input type="text" id="txtLocation" name="location">
-        <input type="submit" value="Submit">
+      Forecast Details:<br>
+      <input type="checkbox" id="cbxHourly" name="cbxHourly">
+      <label for="cbxHourly">3 Hourly?</label>
+      <br>
+      Location:<br>
+      <input type="text" id="txtLocation" name="location">
+      <br>
+      <label id="labelLocErr" style="color:red"></label>
+      <input type="submit" value="Submit">
     </form>
     <div id="results">
         <h2>Results</h2>
-        <h3>Example forecast 1</h3>
-        <strong>1/1/2000</strong>
+        <h3>Today</h3>
+        <label id="labelDateToday" style="font-weight: bold;">1/1/2000</label>
         <ul>
-            <li>Wind direction: South east</li>
-            <li>Chance of rain: 50%</li>
+            <li id="labelTempToday">Temperature: 10C</li><br>
+            <li id="labelFeelsToday">Feels like: 7C</li><br>
+            <li id="labelWindSpeedToday">Wind Speed: 11mph</li><br>
+            <li id="labelWindDirToday">Wind direction: South east</li><br>
+            <li id="labelRainChanceToday">Chance of rain: 50%</li><br>
         </ul>
-        <h3>Example forecast 2</h3>
-        <strong>2/1/2000</strong>
+        <h3>Tomorrow</h3>
+        <label id="labelDateTmrw" style="font-weight: bold;">2/1/2000</label>
         <ul>
-            <li>Wind direction: East</li>
-            <li>Chance of rain: 70%</li>
+          <li id="labelTempTmrw">Temperature: 10C</li><br>
+          <li id="labelFeelsTmrw">Feels like: 7C</li><br>
+          <li id="labelWindSpeedTmrw">Wind Speed: 11mph</li><br>
+          <li id="labelWindDirTmrw">Wind direction: South east</li><br>
+          <li id="labelRainChanceTmrw">Chance of rain: 50%</li><br>
         </ul>
     </div>
   </body>
